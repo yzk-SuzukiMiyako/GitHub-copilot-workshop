@@ -74,7 +74,12 @@ def fizzbuzz_range(start, end):
 
     results = []
     for i in range(start, end + 1):
-        results.append(fizzbuzz(i))
+        out = ""
+        if i % 3 == 0:
+            out += "Fizz"
+        if i % 5 == 0:
+            out += "Buzz"
+        results.append(out or i)
     return results
 
 
